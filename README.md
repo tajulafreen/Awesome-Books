@@ -1,6 +1,5 @@
 <a name="readme-top"></a>
 
-
 <div align="center">
   
   <h3><b>Awesome Book</b></h3>
@@ -35,7 +34,6 @@
 
 # 📖 [Awesome Book] <a name="about-project"></a>
 
-
 **[Awesome Book]** is an online book archive where user can add or remove diffrent books
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -55,7 +53,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-
 - **[Add button]**
 - **[Remove button]**
 - **[Local storage]**
@@ -66,7 +63,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
 - [Live Demo Link](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -75,8 +71,8 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
 To get a local copy up and running, follow these steps.
+
 ```
 git clone <url>
 ```
@@ -85,62 +81,49 @@ git clone <url>
 
 In order to run this project you need:
 
-. A code editor of your choice(like vs code or Atom and so on)
-. Version control System (git is preferred)
-
+- A code editor of your choice(like vs code or Atom and so on)
+- Version control System (git is preferred)
 
 ### Setup
 
 Clone this repository to your desired folder:
+
 ```
 cd my-folder
 git clone https://github.com/tajulafreen/Awesome-Books.git
 cd Awesome-Books
 ```
 
-
 ### Install
 
 Install this project with:
 
-
-
 ```
-  cd my-project
+  cd Awesome-Books
   npm i
 ```
-
 
 ### Usage
 
 To run the project, execute the following command:
 
-
-
 ```
   live server
 ```
-
 
 ### Run tests
 
 To run tests, run the following command:
 
-
-
 ```
  npx eslint .
 ```
-
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
 
 👤 **Afreen**
 
@@ -160,8 +143,6 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
-
 - [ ] **[classes]**
 - [ ] **[prototype]**
 - [ ] **[sort]**
@@ -170,11 +151,7 @@ To run tests, run the following command:
 
 <!-- CONTRIBUTING -->
 
-
-
 ## ⭐️ Show your support <a name="support"></a>
-
-
 
 If you like this project give me stars and follow me on social media.
 
@@ -184,20 +161,14 @@ If you like this project give me stars and follow me on social media.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
-
 I would like to thank to microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
