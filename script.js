@@ -25,12 +25,18 @@ const createBookId = () => {
   return bookID + 1;
 };
 
+const removeItem = (id) => {
+  const newArray = books.filter((item) => item.id !== id);
+  const currentStateId = getLocalIdBook();
+  const objectString = JSON.stringify([newArray, currentStateId]);
+  localStorage.setItem('books', objectString);
+};
+
 const createBookListItem = () => {
-  if (!getLocalStorageBooks()) {
+  if (books === null) {
     createLocalStorage(null);
   }
 
-  getLocalStorageBooks();
   books = getLocalStorageBooks();
 
   bookList.innerHTML = '';
@@ -46,10 +52,11 @@ const createBookListItem = () => {
     removeBtn.id = element.id;
     removeBtn.classList.add('remove-btn');
 
-    removeBtn.textContent = `Remove`;
+    removeBtn.textContent = 'Remove';
 
     removeBtn.addEventListener('click', () => {
-      
+      removeItem(Number(removeBtn.id));
+      createBookListItem();
     });
 
     bookTitleEl.textContent = element.title;
