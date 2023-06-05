@@ -137,6 +137,11 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/Devendra5101)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/devendramulewa/)
 
+👤 **Melkamu**
+
+- Github:[@melkamu12](https://github.com/melkamu12)
+- LinkidIn: [Melkamu-almawu](https://www.linkedin.com/in/melkamu-almawu/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
