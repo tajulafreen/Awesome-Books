@@ -94,8 +94,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 ```
 cd my-folder
-git clone https://github.com/tajulafreen/portfolio.git
-cd portfolio
+git clone https://github.com/tajulafreen/Awesome-Books.git
+cd Awesome-Books
 ```
 
 
