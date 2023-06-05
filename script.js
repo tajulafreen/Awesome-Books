@@ -4,6 +4,7 @@ const Book = {
   title: '',
   author: '',
 };
+
 const addBtn = document.querySelector('#addBtn');
 const bookTitle = document.querySelector('#book-title');
 const bookAuthor = document.querySelector('#book-author');
@@ -49,7 +50,7 @@ const createBookListItem = () => {
     removeBtn.textContent = `Remove`;
 
     removeBtn.addEventListener('click', () => {
-      
+
     });
 
     bookTitleEl.textContent = element.title;
