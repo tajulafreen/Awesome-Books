@@ -12,12 +12,18 @@ body {
   justify-content: center;
   height: 99vh;
   flex-direction: column;
+  font-family: 'Outfit', sans-serif;
+}
+
+li:nth-child(odd) {
+  background-color: #dbd7d7;
 }
 
 #book-list li {
   padding: 20px;
-  padding-left: 0;
-  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #book-list li > p {
@@ -27,4 +33,39 @@ body {
 #book-list {
   list-style: none;
   margin-bottom: 20px;
+  border: 2px solid black;
+  width: 400px;
+  height: max-content;
+}
+
+.remove-btn {
+  border: 2px solid black;
+  padding: 5px 5px;
+  display: block;
+  cursor: pointer;
+}
+
+form {
+  text-align: right;
+  width: 400px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  padding: 5px;
+  width: 100%;
+}
+
+#addBtn {
+  margin-top: 15px;
+  background-color: #fff;
+  border: 2px solid black;
+  padding: 5px;
+  cursor: pointer;
 }
