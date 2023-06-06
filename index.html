@@ -15,23 +15,35 @@
   </head>
   <body>
     <header>
-      <h1>Awesome Books</h1>
+      <h2>Awesome Books</h2>
+      <ul class="nav-link-list">
+        <li class="nav-item"><a href="" class="nav-link">List</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Add new</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+      </ul>
     </header>
-    <section id="books">
-      <ul id="book-list"></ul>
-      <form action="">
-        <div>
-          <input type="text" name="title" id="book-title" placeholder="title" />
-          <input
-            type="text"
-            name="author"
-            id="book-author"
-            placeholder="author"
-          />
-        </div>
-        <button type="submit" id="addBtn">Add</button>
-      </form>
-    </section>
+    <div>
+      <section id="books">
+        <ul id="book-list"></ul>
+        <form action="">
+          <div>
+            <input
+              type="text"
+              name="title"
+              id="book-title"
+              placeholder="title"
+            />
+            <input
+              type="text"
+              name="author"
+              id="book-author"
+              placeholder="author"
+            />
+          </div>
+          <button type="submit" id="addBtn">Add</button>
+        </form>
+      </section>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

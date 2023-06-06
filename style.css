@@ -7,23 +7,54 @@
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 99vh;
   flex-direction: column;
   font-family: 'Outfit', sans-serif;
 }
 
-li:nth-child(odd) {
-  background-color: #dbd7d7;
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 2px solid #000;
+  margin: 5px 10px;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header > ul > li {
+  padding: 10px 25px;
+  border-right: 2px solid #000;
+}
+
+header > ul > li:last-child {
+  border-right: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: rgb(93, 93, 169);
 }
 
 #book-list li {
   padding: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+#book-list li:nth-child(odd) {
+  background-color: #dbd7d7;
 }
 
 #book-list li > p {
