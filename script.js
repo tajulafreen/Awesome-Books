@@ -69,8 +69,7 @@ class Book {
       const bookItem = document.createElement('li');
       bookItem.id = element.id;
 
-      const bookTitleEl = document.createElement('p');
-      const bookAuthor = document.createElement('p');
+      const bookDetailsEl = document.createElement('p');
 
       const removeBtn = document.createElement('button');
       removeBtn.id = element.id;
@@ -83,11 +82,9 @@ class Book {
         this.createBookListItem();
       });
 
-      bookTitleEl.textContent = element.title;
-      bookAuthor.textContent = element.author;
+      bookDetailsEl.textContent = `"${element.title}" by ${element.author}`;
 
-      bookItem.appendChild(bookTitleEl);
-      bookItem.appendChild(bookAuthor);
+      bookItem.appendChild(bookDetailsEl);
       bookItem.appendChild(removeBtn);
 
       this.bookList.appendChild(bookItem);
