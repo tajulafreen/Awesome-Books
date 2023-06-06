@@ -17,14 +17,19 @@
     <header>
       <h2>Awesome Books</h2>
       <ul class="nav-link-list">
-        <li class="nav-item"><a href="" class="nav-link">List</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Add new</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#books" class="nav-link">List</a></li>
+        <li class="nav-item"><a href="#add-books" class="nav-link">Add new</a></li>
+        <li class="nav-item"><a href="#contact-us" class="nav-link">Contact</a></li>
       </ul>
     </header>
     <div>
       <section id="books">
+        <h1>All Awesome Books</h1>
         <ul id="book-list"></ul>
+        
+      </section>
+      <section class="add-books" id="add-books">
+        <h1>Add a new Book</h1>
         <form action="">
           <div>
             <input
@@ -43,7 +48,22 @@
           <button type="submit" id="addBtn">Add</button>
         </form>
       </section>
+      <section class="contact-us" id="contact-us">
+         <h1>Contact Us</h1>
+         <p>Do you have any questions or you just want to say "Hello" ? You can reach out of us!</p>
+         <ul class="contact-list">
+          <li>Our e-mail : example@gmail.com</li>
+          <li>Our phone number : 123456789</li>
+          <li>Our address : Streetname 22, 84503 city, Country</li>
+         </ul>
+      </section>
+      
     </div>
+    <footer>
+      <div class="footer">
+        <p>Copyright ...</p>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

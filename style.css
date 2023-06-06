@@ -47,10 +47,21 @@ header > ul > li:last-child {
   color: rgb(93, 93, 169);
 }
 
+#books {
+  padding-top: 5%;
+  margin-bottom: 2%;
+}
+.contact-us h1,.add-books h1 , #books h1{
+text-align: center;
+font-size: 40px;
+font-weight: 700;
+margin-bottom: 3%;
+}
 #book-list li {
   padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 #book-list li:nth-child(odd) {
@@ -63,11 +74,13 @@ header > ul > li:last-child {
 
 #book-list {
   list-style: none;
-  margin-bottom: 20px;
+
   border: 2px solid black;
-  width: 400px;
+  width: 98%;
   height: max-content;
+  margin: auto;
 }
+
 
 .remove-btn {
   border: 2px solid black;
@@ -75,10 +88,14 @@ header > ul > li:last-child {
   display: block;
   cursor: pointer;
 }
-
+#add-books{
+  margin-left: 25%;
+  margin-right: 20%;
+}
 form {
   text-align: right;
-  width: 400px;
+  width: 80%;
+
 }
 
 form div {
@@ -86,11 +103,14 @@ form div {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 input {
-  padding: 5px;
+  padding: 10px;
   width: 100%;
+  height: 45px;
+  border: 2px solid black;
 }
 
 #addBtn {
@@ -99,4 +119,34 @@ input {
   border: 2px solid black;
   padding: 5px;
   cursor: pointer;
+}
+
+.contact-us p{
+  text-align: center;
+  font-size: 22px;
+  
+}
+
+.contact-list{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 30%;
+  margin-right: 20%;
+  width: 60%;
+  margin-top: 3%;
+  font-size: 22px;
+  
+ 
+}
+.contact-list li:before {
+  content:"• ";
+  }
+
+.footer{
+  height: 10%;
+  width: 96%;
+  padding: 15px;
+  border: 2px solid black;
+  margin: 2%;
 }
