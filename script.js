@@ -1,10 +1,22 @@
-let books = [];
-const Book = {
-  id: null,
-  title: '',
-  author: '',
-};
+class Books {
+  constructor(id, title, author) {
+    this.books = [];
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  }
 
+  add(book) {
+
+  }
+
+  removeItem(id) {
+    const newArray = this.books.filter((item) => item.id !== id);
+    const currentStateId1 = getLocalId();
+    const objectString = JSON.stringify([newArray, currentStateId1]);
+    localStorage.setItem('books', objectString);
+  }
+}
 const addBtn = document.querySelector('#addBtn');
 const bookTitle = document.querySelector('#book-title');
 const bookAuthor = document.querySelector('#book-author');
@@ -33,23 +45,23 @@ const createBookId = () => {
   return bookID + 1;
 };
 
-const removeItem = (id) => {
-  const newArray = books.filter((item) => item.id !== id);
-  const currentStateId1 = getLocalId();
-  const objectString = JSON.stringify([newArray, currentStateId1]);
-  localStorage.setItem('books', objectString);
-};
+// const removeItem = (id) => {
+//   const newArray = books.filter((item) => item.id !== id);
+//   const currentStateId1 = getLocalId();
+//   const objectString = JSON.stringify([newArray, currentStateId1]);
+//   localStorage.setItem('books', objectString);
+// };
 
 const createBookListItem = () => {
   if (!getLocalStorageObject()) {
     createLocalStorage(null);
   }
 
-  books = getLocalBooks();
+  this.books = getLocalBooks();
 
   bookList.innerHTML = '';
 
-  books.forEach((element) => {
+  this.books.forEach((element) => {
     const bookItem = document.createElement('li');
     bookItem.id = element.id;
 
@@ -80,17 +92,14 @@ const createBookListItem = () => {
 
 addBtn.addEventListener('click', (event) => {
   event.preventDefault();
-
-  Book.id = createBookId();
-  Book.title = bookTitle.value;
-  Book.author = bookAuthor.value;
+  const book = new Books(id, title, author);
 
   bookTitle.value = '';
   bookAuthor.value = '';
 
-  books = getLocalBooks();
+  book.books = getLocalBooks();
 
-  books.push(Book);
+  book.books.push(book);
 
   const booksString = JSON.stringify([books, Book.id]);
   localStorage.setItem('books', booksString); // updating the books array
