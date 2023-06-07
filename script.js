@@ -93,4 +93,22 @@ class Book {
 }
 const book = new Book();
 book.add();
-window.addEventListener('load', book.createBookListItem());
+
+const header = document.querySelector('header');
+const stickyHeader = header.offsetTop;
+
+window.onscroll = () => {
+  if (window.pageXOffset > stickyHeader) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+};
+
+window.addEventListener('load', () => {
+  book.createBookListItem();
+});
+
+if (document.location.hash === '' || document.location.hash === '#') {
+  document.location.hash = '#books';
+}

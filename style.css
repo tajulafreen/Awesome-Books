@@ -6,33 +6,70 @@
   box-sizing: border-box;
 }
 
+/* general */
+
 body {
-  height: 99vh;
   flex-direction: column;
   font-family: 'Outfit', sans-serif;
 }
 
+.contact-us h1,
+.add-books h1,
+#books h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+
+section {
+  display: none;
+}
+
+section:target {
+  display: block;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > * {
+  width: 100%;
+}
+
+/* header */
+
 header {
   position: sticky;
   top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   padding: 20px;
   border: 2px solid #000;
   margin: 5px 10px;
+  background-color: #fff;
 }
 
-header ul {
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.nav-link-list {
   display: flex;
   list-style-type: none;
 }
 
-header > ul > li {
+.nav-item {
   padding: 10px 25px;
   border-right: 2px solid #000;
 }
 
-header > ul > li:last-child {
+.nav-item:last-child {
   border-right: none;
 }
 
@@ -47,16 +84,29 @@ header > ul > li:last-child {
   color: rgb(93, 93, 169);
 }
 
+/** stylelint quick fixes */
+
+#contact-us > p {
+  text-align: center;
+  font-size: 22px;
+}
+
+/* book section */
+
 #books {
   padding-top: 5%;
   margin-bottom: 2%;
 }
-.contact-us h1,.add-books h1 , #books h1{
-text-align: center;
-font-size: 40px;
-font-weight: 700;
-margin-bottom: 3%;
+
+#book-list {
+  list-style: none;
+  border: 2px solid black;
+  width: 98%;
+  min-height: 50px;
+  height: max-content;
+  margin: auto;
 }
+
 #book-list li {
   padding: 20px;
   display: flex;
@@ -68,19 +118,9 @@ margin-bottom: 3%;
   background-color: #dbd7d7;
 }
 
-#book-list li > p {
+#book-list > li > p {
   padding-bottom: 5px;
 }
-
-#book-list {
-  list-style: none;
-
-  border: 2px solid black;
-  width: 98%;
-  height: max-content;
-  margin: auto;
-}
-
 
 .remove-btn {
   border: 2px solid black;
@@ -88,14 +128,17 @@ margin-bottom: 3%;
   display: block;
   cursor: pointer;
 }
-#add-books{
+
+/* add book section */
+
+#add-books {
   margin-left: 25%;
   margin-right: 20%;
 }
+
 form {
   text-align: right;
   width: 80%;
-
 }
 
 form div {
@@ -121,13 +164,9 @@ input {
   cursor: pointer;
 }
 
-.contact-us p{
-  text-align: center;
-  font-size: 22px;
-  
-}
+/* contact us section */
 
-.contact-list{
+.contact-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -136,17 +175,21 @@ input {
   width: 60%;
   margin-top: 3%;
   font-size: 22px;
-  
- 
 }
-.contact-list li:before {
-  content:"• ";
-  }
 
-.footer{
+/* .contact-list li:before {
+  content: '• ';
+} */
+
+/* footer section */
+
+.footer {
   height: 10%;
   width: 96%;
   padding: 15px;
   border: 2px solid black;
   margin: 2%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
 }
