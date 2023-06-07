@@ -2,16 +2,16 @@ class Book {
   constructor() {
     this.books = [];
     this.id = null;
-    this.title = '';
-    this.author = '';
-    this.Title = document.querySelector('#book-title');
-    this.Author = document.querySelector('#book-author');
-    this.bookList = document.querySelector('#book-list');
-    this.addBtn = document.querySelector('#addBtn');
+    this.title = "";
+    this.author = "";
+    this.Title = document.querySelector("#book-title");
+    this.Author = document.querySelector("#book-author");
+    this.bookList = document.querySelector("#book-list");
+    this.addBtn = document.querySelector("#addBtn");
   }
 
   add() {
-    this.addBtn.addEventListener('click', (event) => {
+    this.addBtn.addEventListener("click", (event) => {
       event.preventDefault();
       this.books = this.getLocalBooks();
       const tmpObject = {
@@ -20,10 +20,10 @@ class Book {
         author: this.Author.value,
       };
       this.books.push(tmpObject);
-      this.Title.value = '';
-      this.Author.value = '';
+      this.Title.value = "";
+      this.Author.value = "";
       const booksString = JSON.stringify([this.books, tmpObject.id]);
-      localStorage.setItem('books', booksString);
+      localStorage.setItem("books", booksString);
       this.createBookListItem();
     });
   }
@@ -32,11 +32,10 @@ class Book {
     const newArray = this.books.filter((item) => item.id !== id);
     const currentStateId1 = this.getLocalId();
     const objectString = JSON.stringify([newArray, currentStateId1]);
-    localStorage.setItem('books', objectString);
+    localStorage.setItem("books", objectString);
   }
 
-  getLocalStorageObject = () => JSON.parse(localStorage.getItem('books'));
-
+  getLocalStorageObject = () => JSON.parse(localStorage.getItem("books"));
   getLocalId() {
     return this.getLocalStorageObject()[1];
   }
@@ -47,7 +46,7 @@ class Book {
 
   createLocalStorage = (id) => {
     const init = JSON.stringify([[], id]);
-    localStorage.setItem('books', init);
+    localStorage.setItem("books", init);
   };
 
   createBookId() {
@@ -63,21 +62,21 @@ class Book {
 
     this.books = this.getLocalBooks();
 
-    this.bookList.innerHTML = '';
+    this.bookList.innerHTML = "";
 
     this.books.forEach((element) => {
-      const bookItem = document.createElement('li');
+      const bookItem = document.createElement("li");
       bookItem.id = element.id;
 
-      const bookDetailsEl = document.createElement('p');
+      const bookDetailsEl = document.createElement("p");
 
-      const removeBtn = document.createElement('button');
+      const removeBtn = document.createElement("button");
       removeBtn.id = element.id;
-      removeBtn.classList.add('remove-btn');
+      removeBtn.classList.add("remove-btn");
 
-      removeBtn.textContent = 'Remove';
+      removeBtn.textContent = "Remove";
 
-      removeBtn.addEventListener('click', () => {
+      removeBtn.addEventListener("click", () => {
         this.removeItem(Number(removeBtn.id));
         this.createBookListItem();
       });
@@ -94,21 +93,27 @@ class Book {
 const book = new Book();
 book.add();
 
-const header = document.querySelector('header');
+const header = document.querySelector("header");
 const stickyHeader = header.offsetTop;
 
 window.onscroll = () => {
   if (window.pageXOffset > stickyHeader) {
-    header.classList.add('sticky');
+    header.classList.add("sticky");
   } else {
-    header.classList.remove('sticky');
+    header.classList.remove("sticky");
   }
 };
 
-window.addEventListener('load', () => {
-  book.createBookListItem();
+window.addEventListener("load", () => {
+  const localBooks = book.getLocalBooks();
+  if (localBooks.length === 0) {
+    const bookList = document.querySelector("#book-list");
+    bookList.innerHTML = "No recorded book list found";
+  } else {
+    book.createBookListItem();
+  }
 });
 
-if (document.location.hash === '' || document.location.hash === '#') {
-  document.location.hash = '#books';
+if (document.location.hash === "" || document.location.hash === "#") {
+  document.location.hash = "#books";
 }
