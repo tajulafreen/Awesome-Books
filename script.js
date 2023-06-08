@@ -38,11 +38,19 @@ class Book {
   getLocalStorageObject = () => JSON.parse(localStorage.getItem('books'));
 
   getLocalId() {
-    return this.getLocalStorageObject()[1];
+    const currStorageObj = this.getLocalStorageObject();
+    if (!currStorageObj) {
+      return 1;
+    }
+    return currStorageObj[1];
   }
 
   getLocalBooks() {
-    return this.getLocalStorageObject()[0];
+    const currStorageObj = this.getLocalStorageObject();
+    if (!currStorageObj) {
+      return [];
+    }
+    return currStorageObj[0];
   }
 
   createLocalStorage = (id) => {
