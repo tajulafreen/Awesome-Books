@@ -1,4 +1,4 @@
-export default const eventslistner = () =>{
+export const eventslistner = () =>{
 
 
     const header = document.querySelector('header');

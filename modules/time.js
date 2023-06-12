@@ -1,9 +1,8 @@
 import { DateTime } from '../node_modules/luxon/src/luxon.js';
 
-const currenttimeanddate = () => {
+export const currenttimeanddate = () => {
   const currentTime = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
-  const dateEl = document.getElementById('now');
-  dateEl.textContent = currentTime;
+  const date = document.getElementById('now');
+  date.textContent = currentTime;
 };
 
-export default currenttimeanddate;

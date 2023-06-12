@@ -1,8 +1,8 @@
 
-import * as myclass from "./modules/class";
-import eventslistner from "./modules/function";
-import currenttimeanddate from "./modules/time";
+import * as myclass from "./modules/class.js";
+import eventslistner from "./modules/function.js";
+import currenttimeanddate from "./modules/time.js";
 
-myclass();
+myclass.init();
 eventslistner();
-currenttimeanddate()
+currenttimeanddate();
