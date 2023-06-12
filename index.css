@@ -177,9 +177,6 @@ input {
   font-size: 22px;
 }
 
-/* .contact-list li:before {
-  content: '• ';
-} */
 
 /* footer section */
 
@@ -192,4 +189,8 @@ input {
   position: fixed;
   bottom: 0;
   background-color: #fff;
+}
+
+#now {
+  margin-left: 75%;
 }
